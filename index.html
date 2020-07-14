@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Floe</title>
+	<title>Floe</title>
+	<link rel="stylesheet" href="/live2d/css/live2d.css" />
     <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -30,7 +31,8 @@
    			<button type="submit" class="btn btn-default">搜索</button>
    		</form>
    	</div>
-   	 </navbar>
+		</navbar>
+		
    	<div class="container">
    	 <div class="alert alert-info">仅供浏览</div>
 
@@ -96,7 +98,12 @@
     	<li><a href="#">3</a></li>
     	<li><a href="#">下一页</a></li>
 
-    </ul>
+	</ul>
+	<div id="landlord">
+		<div class="message" style="opacity:0"></div>
+		<canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+		<div class="hide-button">隐藏</div>
+	</div>
     <div>
     	<div class="list-group">
     		<a class="list-group-item" href="#">第1章</a>
@@ -106,6 +113,16 @@
 
     </div>
 
-   	</div>
+	   </div>
+	   
+	   <script type="text/javascript">
+		var message_Path = '/live2d/'
+		var home_Path =  'https://fork3xxx.github.io/'  //此处修改为你的域名，必须带斜杠
+	</script>
+	<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+	<script type="text/javascript" src="/live2d/js/message.js"></script>
+	<script type="text/javascript">
+		loadlive2d("live2d", "/live2d/model/tia/model.json");
+	</script> 
 </body>
 </html>
